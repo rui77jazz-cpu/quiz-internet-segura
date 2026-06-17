@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Comic Sans MS", "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(135deg, #dff6ff, #fff0c9);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #17324d;
+}
+
+.app {
+  width: 100%;
+  max-width: 850px;
+}
+
+.card {
+  background: #ffffff;
+  border: 6px solid #2d9cdb;
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 12px 0 #b5e6ff;
+  text-align: center;
+}
+
+.emoji {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #1457c8;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 2.2rem);
+  line-height: 1.25;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+button {
+  border: 0;
+  border-radius: 18px;
+  background: #ff8c1a;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 16px 24px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #c96a0e;
+  transition: transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+.hidden {
+  display: none;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.progress {
+  background: #d9f2ff;
+  border-radius: 999px;
+  height: 18px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #2ecc71;
+  transition: width 0.3s ease;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.answer {
+  background: #f4fbff;
+  color: #17324d;
+  border: 4px solid #a9dcff;
+  box-shadow: 0 6px 0 #a9dcff;
+  text-align: left;
+}
+
+.answer.correct {
+  background: #d9ffd9;
+  border-color: #2ecc71;
+  box-shadow: 0 6px 0 #27ae60;
+}
+
+.answer.wrong {
+  background: #ffe2e2;
+  border-color: #ff6b6b;
+  box-shadow: 0 6px 0 #d94f4f;
+}
+
+.feedback {
+  min-height: 48px;
+  font-weight: bold;
+  color: #1457c8;
+}
+
+@media (min-width: 700px) {
+  .answers {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Internet Segura</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="card intro" id="intro">
+      <div class="emoji">🛡️💻🌈</div>
+      <h1>Quiz da Internet Segura</h1>
+      <p>Vamos descobrir se sabes navegar na Internet com cuidado?</p>
+      <button id="startBtn">Começar Quiz</button>
+    </section>
+
+    <section class="card quiz hidden" id="quiz">
+      <div class="topbar">
+        <span id="questionNumber">Pergunta 1</span>
+        <span id="score">Pontos: 0</span>
+      </div>
+
+      <div class="progress">
+        <div id="progressBar"></div>
+      </div>
+
+      <h2 id="questionText"></h2>
+
+      <div id="answers" class="answers"></div>
+
+      <p id="feedback" class="feedback"></p>
+
+      <button id="nextBtn" class="hidden">Próxima</button>
+    </section>
+
+    <section class="card result hidden" id="result">
+      <div class="emoji">🎉</div>
+      <h1>Resultado final</h1>
+      <p id="finalScore"></p>
+      <p id="finalMessage"></p>
+      <button id="restartBtn">Jogar novamente</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
